@@ -1,6 +1,6 @@
-import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
-export class CreateCategoryService {
+export class CreateCategoryUseCase {
   constructor(private list: ICategoriesRepository) {}
   execute(name: string) {
     if (this.list.findByName(name)){ 
